@@ -13,9 +13,11 @@ $(document).ready(function(){
   	});
 
    var newGame = function() {
+   $("#feedback").text("Make your Guess!")
    $("#userGuess").val("");
    $("#count").text(0);
    $("#guessList").empty();
+
    var random_number = Math.floor((Math.random() * 10) + 1);
 
    random_number = 5;
