@@ -12,8 +12,17 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
+
+   var newGame = function() {
    var random_number = Math.floor((Math.random() * 10) + 1);
 
+   $("#userGuess").val()
+
+   }
+
+   // while (random_number !==  ) {
+   // }
+   newGame();
 });
 
 
