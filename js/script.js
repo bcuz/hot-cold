@@ -23,7 +23,7 @@ $(document).ready(function(){
    var count = 0
    $("form").submit(function(e) {
      e.preventDefault();
-    var user_guess = $("#userGuess").val();
+     var user_guess = $("#userGuess").val();
 
      if (parseInt(user_guess) !== random_number) {
        count += 1;
