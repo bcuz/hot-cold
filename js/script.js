@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	
+
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
     	$(".overlay").fadeIn(1000);
@@ -11,6 +11,8 @@ $(document).ready(function(){
   	$("a.close").click(function(){
   		$(".overlay").fadeOut(1000);
   	});
+
+   var random_number = Math.floor((Math.random() * 10) + 1);
 
 });
 
