@@ -38,6 +38,8 @@ $(document).ready(function(){
        if (Math.abs(user_guess - random_number) > 50 ) {
           $("#feedback").text("Colder than cold.")
        }
+     } else {
+      $("#feedback").text("Winner winner!")
      }
 
    })
