@@ -34,10 +34,6 @@ $(document).ready(function(){
 
    newGame();
 
-   // while (random_number !==  ) {
-   // }
-   // newGame();
-
    $(".new").click(function() {
       newGame();
    })
