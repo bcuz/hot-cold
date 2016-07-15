@@ -12,19 +12,17 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
-    // why is it refreshing after each submit?
-    // something wrong here. strange
-
    // var newGame = function() {
    $("#userGuess").val("");
    var random_number = Math.floor((Math.random() * 10) + 1);
 
-   var count = 0;
-   $("form").submit(function() {
-   if ($("#userGuess").val() !== random_number) {
-     count += 1;
-    $("#count").text(count);
-   }
+   var count = 0
+   $("form").submit(function(e) {
+     e.preventDefault();
+     if ($("#userGuess").val() !== random_number) {
+       count += 1;
+       $("#count").text(count)
+     }
 
    })
 
