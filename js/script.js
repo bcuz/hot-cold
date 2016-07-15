@@ -15,6 +15,7 @@ $(document).ready(function(){
    var newGame = function() {
    $("#userGuess").val("");
    $("#count").text(0);
+   $("#guessList").empty();
    var random_number = Math.floor((Math.random() * 10) + 1);
 
    var count = 0
