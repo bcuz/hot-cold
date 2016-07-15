@@ -26,7 +26,7 @@ $(document).ready(function(){
      var user_guess = $("#userGuess").val();
 
      if (isNaN(user_guess) === true || user_guess <= 0) {
-      $("#feedback").text("Shit")
+      $("#feedback").text("Invalid. Pick an integer greater than 0")
     }
      else if (parseInt(user_guess) !== random_number) {
        count += 1;
