@@ -12,8 +12,9 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
-   // var newGame = function() {
+   var newGame = function() {
    $("#userGuess").val("");
+   $("#count").text(0);
    var random_number = Math.floor((Math.random() * 10) + 1);
 
    var count = 0
@@ -27,14 +28,16 @@ $(document).ready(function(){
    })
 
 
-   // }();
+   };
+
+   newGame();
 
    // while (random_number !==  ) {
    // }
    // newGame();
 
    $(".new").click(function() {
-    newGame();
+      newGame();
    })
 });
 
