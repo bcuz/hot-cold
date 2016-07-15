@@ -25,7 +25,10 @@ $(document).ready(function(){
      e.preventDefault();
      var user_guess = $("#userGuess").val();
 
-     if (parseInt(user_guess) !== random_number) {
+     if (isNaN(user_guess) === true || user_guess <= 0) {
+      $("#feedback").text("Shit")
+    }
+     else if (parseInt(user_guess) !== random_number) {
        count += 1;
        $("#count").text(count)
        $("#guessList").append("<li>" + user_guess + "</li>")
