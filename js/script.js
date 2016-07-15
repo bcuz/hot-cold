@@ -21,7 +21,7 @@ $(document).ready(function(){
    var count = 0
    $("form").submit(function(e) {
      e.preventDefault();
-     if ($("#userGuess").val() !== random_number) {
+     if (parseInt($("#userGuess").val()) !== random_number) {
        count += 1;
        $("#count").text(count)
        $("#guessList").append("<li>" + $("#userGuess").val() + "</li>")
