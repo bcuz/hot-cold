@@ -14,15 +14,19 @@ $(document).ready(function(){
 
 
    var newGame = function() {
+   $("#userGuess").val("");
    var random_number = Math.floor((Math.random() * 10) + 1);
 
-   $("#userGuess").val()
 
    }
 
    // while (random_number !==  ) {
    // }
    newGame();
+
+   $(".new").click(function() {
+    newGame();
+   })
 });
 
 
