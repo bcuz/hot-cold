@@ -34,6 +34,10 @@ $(document).ready(function(){
        count += 1;
        $("#count").text(count)
        $("#guessList").append("<li>" + user_guess + "</li>")
+
+       if (Math.abs(user_guess - random_number) > 50 ) {
+          $("#feedback").text("Colder than cold.")
+       }
      }
 
    })
