@@ -25,12 +25,12 @@ $(document).ready(function(){
    var count = 0
    $("form").submit(function(e) {
      e.preventDefault();
-     var user_guess = $("#userGuess").val();
+     var user_guess = parseInt($("#userGuess").val());
 
      if (isNaN(user_guess) === true || user_guess <= 0) {
       $("#feedback").text("Invalid. Pick an integer greater than 0")
     }
-     else if (parseInt(user_guess) !== random_number) {
+     else if (user_guess !== random_number) {
        count += 1;
        $("#count").text(count)
        $("#guessList").append("<li>" + user_guess + "</li>")
