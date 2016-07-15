@@ -23,12 +23,13 @@ $(document).ready(function(){
      if ($("#userGuess").val() !== random_number) {
        count += 1;
        $("#count").text(count)
+       $("#guessList").append("<li>" + $("#userGuess").val() + "</li>")
      }
 
    })
 
 
-   };
+   }
 
    newGame();
 
