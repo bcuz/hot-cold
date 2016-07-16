@@ -71,6 +71,7 @@ $(document).ready(function(){
    newGame();
 
    $(".new").click(function() {
+    // directions say not to do this
       location.reload();
    })
 });
