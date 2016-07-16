@@ -35,7 +35,17 @@ $(document).ready(function(){
        $("#count").text(count)
        $("#guessList").append("<li>" + user_guess + "</li>")
 
-       if (Math.abs(user_guess - random_number) > 50 ) {
+       if (count === 5) {
+
+         $("#feedback").text("You lose.");
+
+         // starts new game 2 seconds after losing
+         setTimeout(func, 2000);
+          function func() {
+              newGame();
+          }
+
+       } else if (Math.abs(user_guess - random_number) > 50 ) {
           $("#feedback").text("Colder than cold.")
        }
      } else {
