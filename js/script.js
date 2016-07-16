@@ -35,8 +35,9 @@ $(document).ready(function(){
      else if (user_guess !== random_number) {
        count += 1;
        $("#count").text(count)
-       $("#userGuess").val("");
+       // wiping out the value before it can get to user guess
        $("#guessList").append("<li>" + user_guess + "</li>")
+       $("#userGuess").val("");
 
        if (count === 5) {
 
