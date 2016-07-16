@@ -40,12 +40,12 @@ $(document).ready(function(){
 
        if (count === 5) {
 
-         $("#feedback").text("You lose.");
+         $("#feedback").text("You lose. New game in 2... 1...");
 
          // starts new game 2 seconds after losing
-         setTimeout(func, 2000);
+         setTimeout(func, 1250);
           function func() {
-              newGame();
+              location.reload();
           }
 
        } else if (Math.abs(user_guess - random_number) > 50 ) {
