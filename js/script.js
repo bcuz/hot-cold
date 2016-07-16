@@ -27,6 +27,7 @@ $(document).ready(function(){
      e.preventDefault();
      var user_guess = parseInt($("#userGuess").val());
      console.log(user_guess);
+     // this fires off on a win
      if (isNaN(user_guess) === true || user_guess <= 0) {
       $("#feedback").text("Invalid. Pick an integer greater than 0")
       $("#userGuess").val("");
@@ -53,6 +54,11 @@ $(document).ready(function(){
      } else if (win === true ) {
       $("#feedback").text("Ya already won")
      } else if (random_number === user_guess) {
+      // put this stuff in function perhaps
+      count += 1;
+     $("#count").text(count)
+     $("#guessList").append("<li>" + user_guess + "</li>")
+     $("#userGuess").val("");
       $("#feedback").text("Winner winner!")
       win = true;
      }
