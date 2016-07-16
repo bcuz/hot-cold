@@ -27,15 +27,15 @@ $(document).ready(function(){
    $("form").submit(function(e) {
      e.preventDefault();
      var user_guess = parseInt($("#userGuess").val());
-
+     console.log(user_guess);
      if (isNaN(user_guess) === true || user_guess <= 0) {
       $("#feedback").text("Invalid. Pick an integer greater than 0")
       $("#userGuess").val("");
     }
      else if (user_guess !== random_number) {
+      $("#feedback").text("Try again")
        count += 1;
        $("#count").text(count)
-       // wiping out the value before it can get to user guess
        $("#guessList").append("<li>" + user_guess + "</li>")
        $("#userGuess").val("");
 
