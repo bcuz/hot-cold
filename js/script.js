@@ -29,10 +29,12 @@ $(document).ready(function(){
 
      if (isNaN(user_guess) === true || user_guess <= 0) {
       $("#feedback").text("Invalid. Pick an integer greater than 0")
+      $("#userGuess").val("");
     }
      else if (user_guess !== random_number) {
        count += 1;
        $("#count").text(count)
+       $("#userGuess").val("");
        $("#guessList").append("<li>" + user_guess + "</li>")
 
        if (count === 5) {
