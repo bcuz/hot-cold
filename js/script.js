@@ -16,7 +16,6 @@ $(document).ready(function(){
    var count = 0
    $("#feedback").text("Make your Guess!")
    $("#userGuess").val("");
-   // this isnt working properly
    $("#count").text(count);
    $("#guessList").empty();
 
