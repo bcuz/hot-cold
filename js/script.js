@@ -13,7 +13,6 @@ $(document).ready(function(){
   	});
 
    var newGame = function() {
-    // its like this is only temporarily resetting
    var count = 0
    $("#feedback").text("Make your Guess!")
    $("#userGuess").val("");
@@ -27,7 +26,6 @@ $(document).ready(function(){
    $("form").submit(function(e) {
      e.preventDefault();
      var user_guess = parseInt($("#userGuess").val());
-     // print a number AND NaN number? huh?
      console.log(user_guess);
      if (isNaN(user_guess) === true || user_guess <= 0) {
       $("#feedback").text("Invalid. Pick an integer greater than 0")
