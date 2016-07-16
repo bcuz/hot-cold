@@ -31,7 +31,7 @@ $(document).ready(function(){
       $("#feedback").text("Invalid. Pick an integer greater than 0")
       $("#userGuess").val("");
     }
-     else if (user_guess !== random_number) {
+     else if (user_guess !== random_number && count !== 5) {
       $("#feedback").text("Try again")
        count += 1;
        $("#count").text(count)
@@ -51,9 +51,9 @@ $(document).ready(function(){
        } else if (Math.abs(user_guess - random_number) > 50 ) {
           $("#feedback").text("Colder than cold.")
        }
-     } else {
-      $("#feedback").text("Winner winner!")
-     }
+     } // else {
+     //  $("#feedback").text("Winner winner!")
+     // }
 
    })
 
