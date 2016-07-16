@@ -63,11 +63,6 @@ $(document).ready(function(){
    newGame();
 
    $(".new").click(function() {
-    // if the button is clicked, the new game
-    // function is run again
-    // why would that prevent past data from erasing?
-    // it does erases visually, but its like the data
-    // is still there underneath
       location.reload();
    })
 });
