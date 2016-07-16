@@ -42,7 +42,6 @@ $(document).ready(function(){
 
          $("#feedback").text("You lose. New game in 2... 1...");
 
-         // starts new game 2 seconds after losing
          setTimeout(func, 1250);
           function func() {
               location.reload();
