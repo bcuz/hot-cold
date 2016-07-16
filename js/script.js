@@ -12,6 +12,7 @@ $(document).ready(function(){
   	});
 
    var newGame = function() {
+   var win = false;
    var count = 0
    $("#feedback").text("Make your Guess!")
    $("#userGuess").val("");
@@ -30,7 +31,7 @@ $(document).ready(function(){
       $("#feedback").text("Invalid. Pick an integer greater than 0")
       $("#userGuess").val("");
     }
-     else if (user_guess !== random_number && count !== 5) {
+     else if (user_guess !== random_number && count !== 5 && win !== true) {
       $("#feedback").text("Try again")
        count += 1;
        $("#count").text(count)
@@ -49,9 +50,12 @@ $(document).ready(function(){
        } else if (Math.abs(user_guess - random_number) > 50 ) {
           $("#feedback").text("Colder than cold.")
        }
-     } // else {
-     //  $("#feedback").text("Winner winner!")
-     // }
+     } else if (win === true ) {
+      $("#feedback").text("Ya already won")
+     } else if (random_number === user_guess) {
+      $("#feedback").text("Winner winner!")
+      win = true;
+     }
 
    })
 
