@@ -27,6 +27,7 @@ $(document).ready(function(){
    $("form").submit(function(e) {
      e.preventDefault();
      var user_guess = parseInt($("#userGuess").val());
+     // print a number AND NaN number? huh?
      console.log(user_guess);
      if (isNaN(user_guess) === true || user_guess <= 0) {
       $("#feedback").text("Invalid. Pick an integer greater than 0")
@@ -67,6 +68,8 @@ $(document).ready(function(){
     // if the button is clicked, the new game
     // function is run again
     // why would that prevent past data from erasing?
+    // it does erases visually, but its like the data
+    // is still there underneath
       newGame();
    })
 });
