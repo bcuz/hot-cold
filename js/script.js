@@ -13,6 +13,7 @@ $(document).ready(function(){
   	});
 
    var newGame = function() {
+    // its like this is only temporarily resetting
    var count = 0
    $("#feedback").text("Make your Guess!")
    $("#userGuess").val("");
@@ -69,7 +70,7 @@ $(document).ready(function(){
     // why would that prevent past data from erasing?
     // it does erases visually, but its like the data
     // is still there underneath
-      newGame();
+      location.reload();
    })
 });
 
