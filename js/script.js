@@ -11,19 +11,28 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
+   // separate game from newGame
    var count;
    var user_guess;
+   var win;
+   var random_number;
+
    var newGame = function() {
-   var win = false;
+   win = false;
    count = 0
    $("#feedback").text("Make your Guess!")
    $("#userGuess").val("");
    $("#count").text(count);
    $("#guessList").empty();
 
-   var random_number = Math.floor((Math.random() * 10) + 1);
+   random_number = Math.floor((Math.random() * 10) + 1);
 
    random_number = 5;
+
+   game();
+
+   }
+   var game = function() {
 
    $("form").submit(function() {
      user_guess = parseInt($("#userGuess").val());
