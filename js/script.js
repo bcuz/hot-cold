@@ -45,7 +45,7 @@ $(document).ready(function(){
 
          setTimeout(func, 1250);
           function func() {
-              location.reload();
+              newGame();
           }
 
        } else if (Math.abs(user_guess - random_number) > 50 ) {
