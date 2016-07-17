@@ -19,6 +19,7 @@ $(document).ready(function(){
 
    var newGame = function() {
    win = false;
+   user_guess = 0;
    count = 0
    $("#feedback").text("Make your Guess!")
    $("#userGuess").val("");
@@ -29,14 +30,12 @@ $(document).ready(function(){
 
    random_number = 5;
 
-   game();
-
    }
-   var game = function() {
+
+   newGame();
 
    $("form").submit(function() {
      user_guess = parseInt($("#userGuess").val());
-     console.log(user_guess);
 
      if (win !== true && isNaN(user_guess) === true || user_guess <= 0 ) {
       $("#feedback").text("Invalid. Pick an integer greater than 0")
@@ -45,6 +44,7 @@ $(document).ready(function(){
      else if (user_guess !== random_number && count !== 5 && win !== true) {
       $("#feedback").text("Try again")
        count += 1;
+       console.log(count);
        $("#count").text(count)
        $("#guessList").append("<li>" + user_guess + "</li>")
        $("#userGuess").val("");
@@ -76,11 +76,6 @@ $(document).ready(function(){
      return false;
 
    })
-
-
-   }
-
-   newGame();
 
    $(".new").click(function() {
       newGame();
