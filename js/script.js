@@ -58,13 +58,13 @@ $(document).ready(function(){
 
        } else if (distance > 50 ) {
           $("#feedback").text("Colder than cold.")
-       } else if (distance >= 30 && Math.abs(user_guess - random_number) <= 50) {
+       } else if (distance >= 30 && distance <= 50) {
         $("#feedback").text("Cold.");
-       } else if (distance >= 20 && Math.abs(user_guess - random_number) < 30) {
+       } else if (distance >= 20 && distance < 30) {
         $("#feedback").text("Warm");
-       } else if (distance >= 10 && Math.abs(user_guess - random_number) < 20) {
+       } else if (distance >= 10 && distance < 20) {
         $("#feedback").text("Hot");
-       } else if (distance >= 1 && Math.abs(user_guess - random_number) < 10) {
+       } else if (distance >= 1 && distance < 10) {
         $("#feedback").text("Very Hot");
        }
      } else if (win === true ) {
