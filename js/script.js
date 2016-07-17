@@ -41,9 +41,7 @@ $(document).ready(function(){
       $("#userGuess").val("");
     }
      else if (user_guess !== random_number && count !== 5 && win !== true) {
-      $("#feedback").text("Try again")
        count += 1;
-       console.log(count);
        $("#count").text(count)
        $("#guessList").append("<li>" + user_guess + "</li>")
        $("#userGuess").val("");
