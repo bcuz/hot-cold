@@ -34,6 +34,7 @@ $(document).ready(function(){
    newGame();
 
    $("form").submit(function() {
+    // $("#guessList:last-child").text()
      user_guess = parseInt($("#userGuess").val());
 
      if (win !== true && isNaN(user_guess) === true || user_guess <= 0 ) {
