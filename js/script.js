@@ -41,6 +41,7 @@ $(document).ready(function(){
       $("#userGuess").val("");
     }
      else if (user_guess !== random_number && count !== 5 && win !== true) {
+       var distance = Math.abs(user_guess - random_number);
        count += 1;
        $("#count").text(count)
        $("#guessList").append("<li>" + user_guess + "</li>")
@@ -55,15 +56,15 @@ $(document).ready(function(){
               newGame();
           }
 
-       } else if (Math.abs(user_guess - random_number) > 50 ) {
+       } else if (distance > 50 ) {
           $("#feedback").text("Colder than cold.")
-       } else if (Math.abs(user_guess - random_number) >= 30 && Math.abs(user_guess - random_number) <= 50) {
+       } else if (distance >= 30 && Math.abs(user_guess - random_number) <= 50) {
         $("#feedback").text("Cold.");
-       } else if (Math.abs(user_guess - random_number) >= 20 && Math.abs(user_guess - random_number) < 30) {
+       } else if (distance >= 20 && Math.abs(user_guess - random_number) < 30) {
         $("#feedback").text("Warm");
-       } else if (Math.abs(user_guess - random_number) >= 10 && Math.abs(user_guess - random_number) < 20) {
+       } else if (distance >= 10 && Math.abs(user_guess - random_number) < 20) {
         $("#feedback").text("Hot");
-       } else if (Math.abs(user_guess - random_number) >= 1 && Math.abs(user_guess - random_number) < 10) {
+       } else if (distance >= 1 && Math.abs(user_guess - random_number) < 10) {
         $("#feedback").text("Very Hot");
        }
      } else if (win === true ) {
