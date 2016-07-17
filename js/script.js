@@ -27,8 +27,6 @@ $(document).ready(function(){
 
    $("form").submit(function() {
      var user_guess = parseInt($("#userGuess").val());
-     console.log(user_guess);
-     // this fires off on a win
 
      if (win !== true && isNaN(user_guess) === true || user_guess <= 0 ) {
       $("#feedback").text("Invalid. Pick an integer greater than 0")
