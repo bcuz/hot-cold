@@ -11,7 +11,6 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
-   // separate game from newGame
    var count;
    var user_guess;
    var win;
