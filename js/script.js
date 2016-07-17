@@ -59,6 +59,14 @@ $(document).ready(function(){
 
        } else if (Math.abs(user_guess - random_number) > 50 ) {
           $("#feedback").text("Colder than cold.")
+       } else if (Math.abs(user_guess - random_number) >= 30 && Math.abs(user_guess - random_number) <= 50) {
+        $("#feedback").text("Cold.");
+       } else if (Math.abs(user_guess - random_number) >= 20 && Math.abs(user_guess - random_number) < 30) {
+        $("#feedback").text("Warm");
+       } else if (Math.abs(user_guess - random_number) >= 10 && Math.abs(user_guess - random_number) < 20) {
+        $("#feedback").text("Hot");
+       } else if (Math.abs(user_guess - random_number) >= 1 && Math.abs(user_guess - random_number) < 10) {
+        $("#feedback").text("Very Hot");
        }
      } else if (win === true ) {
       $("#feedback").text("Ya already won")
