@@ -11,9 +11,11 @@ $(document).ready(function(){
   		$(".overlay").fadeOut(1000);
   	});
 
+   var count;
+
    var newGame = function() {
    var win = false;
-   var count = 0
+   count = 0
    $("#feedback").text("Make your Guess!")
    $("#userGuess").val("");
    $("#count").text(count);
@@ -73,7 +75,7 @@ $(document).ready(function(){
 
    $(".new").click(function() {
     // directions say not to do this
-      location.reload();
+      newGame();
    })
 });
 
