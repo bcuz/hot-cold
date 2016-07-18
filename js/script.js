@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function() {
 
 	/*--- Display information modal box ---*/
   	$(".what").click(function(){
