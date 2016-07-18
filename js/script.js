@@ -26,8 +26,7 @@ $(document).ready(function(){
    $("#guessList").empty();
 
    random_number = Math.floor((Math.random() * 10) + 1);
-
-   random_number = 5;
+   console.log(random_number);
 
    }
 
