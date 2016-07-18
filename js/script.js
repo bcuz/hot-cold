@@ -31,6 +31,13 @@ $(document).ready(function(){
 
    }
 
+   var new_guess = function() {
+     count += 1;
+     $("#count").text(count)
+     $("#guessList").append("<li>" + user_guess + "</li>")
+     $("#userGuess").val("");
+   }
+
    newGame();
 
    $("form").submit(function() {
@@ -43,10 +50,7 @@ $(document).ready(function(){
     }
      else if (user_guess !== random_number && count !== 5 && win !== true) {
        var distance = Math.abs(user_guess - random_number);
-       count += 1;
-       $("#count").text(count)
-       $("#guessList").append("<li>" + user_guess + "</li>")
-       $("#userGuess").val("");
+       new_guess();
 
        if (count === 5) {
 
@@ -71,11 +75,7 @@ $(document).ready(function(){
      } else if (win === true ) {
       $("#feedback").text("Ya already won")
      } else if (random_number === user_guess) {
-      // put this stuff in function perhaps
-      count += 1;
-     $("#count").text(count)
-     $("#guessList").append("<li>" + user_guess + "</li>")
-     $("#userGuess").val("");
+      new_guess();
       $("#feedback").text("Winner winner!")
       win = true;
      }
