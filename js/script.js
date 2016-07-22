@@ -37,6 +37,15 @@ $(function() {
      $("#userGuess").val("");
    }
 
+   var loss = function() {
+      $("#feedback").text("You lose. New game in 2... 1...");
+
+         setTimeout(func, 1250);
+          function func() {
+              newGame();
+          }
+   }
+
    newGame();
 
    $("form").submit(function() {
@@ -53,12 +62,7 @@ $(function() {
 
        if (count === 5) {
 
-         $("#feedback").text("You lose. New game in 2... 1...");
-
-         setTimeout(func, 1250);
-          function func() {
-              newGame();
-          }
+        loss();
 
        } else if (distance > 50 ) {
           $("#feedback").text("Colder than cold.")
